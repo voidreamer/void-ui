@@ -1,6 +1,6 @@
-# ⬛ Void UI
+# Void UI
 
-Cryptic tech aesthetic — warm void, soft pastels, Japanese/tech vibes.
+Cryptic tech aesthetic. Warm void, soft pastels, Japanese and tech vibes.
 
 A CSS design system extracted from [voidreamer.github.io](https://voidreamer.github.io). Drop it into any project for instant dark, warm, production-ready UI.
 
@@ -38,10 +38,10 @@ Pick what you need:
 | `--elevated` | `#2a2521` | Higher elevation |
 | `--peach` | `#e8a87c` | Primary accent |
 | `--blush` | `#d4a5a5` | Secondary warm |
-| `--sand` | `#c9b896` | Tertiary/warnings |
+| `--sand` | `#c9b896` | Tertiary, warnings |
 | `--moss` | `#a5b5a0` | Success states |
-| `--lilac` | `#b8a9c9` | Info/subtle accent |
-| `--clay` | `#c17c60` | Bold/logo accent |
+| `--lilac` | `#b8a9c9` | Info, subtle accent |
+| `--clay` | `#c17c60` | Bold, logo accent |
 
 ### Fonts
 
@@ -115,7 +115,7 @@ Colors: `--peach`, `--moss`, `--sand`, `--blush`, `--lilac`, `--danger`, `--outl
 </div>
 ```
 
-### Sidebar & Side Rail
+### Sidebar and Side Rail
 
 ```html
 <!-- Full sidebar -->
@@ -138,18 +138,18 @@ Colors: `--peach`, `--moss`, `--sand`, `--blush`, `--lilac`, `--danger`, `--outl
 
 ### More Components
 
-- **Tabs** — `.void-tabs` + `.void-tab`
-- **Modal** — `.void-overlay` + `.void-modal`
-- **Dropdown** — `.void-dropdown` + `.void-dropdown__menu`
-- **Alert** — `.void-alert` with `--success`, `--warning`, `--danger`
-- **Progress** — `.void-progress` + `.void-progress__bar`
-- **Toast** — `.void-toast` with status variants
-- **Avatar** — `.void-avatar` with `--sm`, `--lg`, groups
-- **Tooltip** — `.void-tooltip-wrap` + `.void-tooltip`
-- **Separator** — `.void-sep` with optional text
-- **Kbd** — `.void-kbd`
-- **Skeleton** — `.void-skeleton`
-- **Spinner** — `.void-spinner`
+- Tabs: `.void-tabs` + `.void-tab`
+- Modal: `.void-overlay` + `.void-modal`
+- Dropdown: `.void-dropdown` + `.void-dropdown__menu`
+- Alert: `.void-alert` with `--success`, `--warning`, `--danger`
+- Progress: `.void-progress` + `.void-progress__bar`
+- Toast: `.void-toast` with status variants
+- Avatar: `.void-avatar` with `--sm`, `--lg`, groups
+- Tooltip: `.void-tooltip-wrap` + `.void-tooltip`
+- Separator: `.void-sep` with optional text
+- Kbd: `.void-kbd`
+- Skeleton: `.void-skeleton`
+- Spinner: `.void-spinner`
 
 ## Light Theme
 
@@ -161,7 +161,7 @@ All tokens automatically adjust for warm-light surfaces.
 
 ## Cryptic Decorations
 
-The signature void aesthetic — use sparingly:
+The signature void aesthetic. Use sparingly:
 
 ```html
 <span class="void-cryptic">虚空設計</span>
@@ -171,8 +171,8 @@ The signature void aesthetic — use sparingly:
 
 ## Used By
 
-- [voidreamer.github.io](https://voidreamer.github.io) — Portfolio
-- [OpenGrid](https://github.com/voidreamer/opengrid-lite) — Production tracking
+- [voidreamer.github.io](https://voidreamer.github.io) (Portfolio)
+- [OpenGrid](https://github.com/voidreamer/opengrid-lite) (Production tracking)
 
 ## License
 
