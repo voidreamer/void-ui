@@ -1,0 +1,116 @@
+/* ============================================
+   VOID UI — Design Tokens
+   Cryptic tech aesthetic: warm void, soft pastels,
+   Japanese/tech undertones
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&family=Orbitron:wght@500;700&display=swap');
+
+:root {
+    /* ---- Surfaces ---- */
+    --void: #0f0d0b;
+    --surface: #171412;
+    --raised: #1f1b18;
+    --elevated: #2a2521;
+
+    /* ---- Warm Pastels ---- */
+    --peach: #e8a87c;
+    --blush: #d4a5a5;
+    --sand: #c9b896;
+    --moss: #a5b5a0;
+    --lilac: #b8a9c9;
+    --clay: #c17c60;
+
+    /* ---- Semantic (mapped from pastels) ---- */
+    --accent: var(--peach);
+    --accent-hover: #d4965e;
+    --accent-bg: color-mix(in srgb, var(--peach) 12%, transparent);
+    --accent-text: var(--peach);
+    --success: var(--moss);
+    --success-bg: color-mix(in srgb, var(--moss) 12%, transparent);
+    --warning: var(--sand);
+    --warning-bg: color-mix(in srgb, var(--sand) 12%, transparent);
+    --danger: #c9544e;
+    --danger-bg: color-mix(in srgb, #c9544e 12%, transparent);
+    --info: var(--lilac);
+    --info-bg: color-mix(in srgb, var(--lilac) 12%, transparent);
+
+    /* ---- Text ---- */
+    --white: #f5f0eb;
+    --gray: #9a918a;
+    --muted: #4a4540;
+    --faint: #2a2622;
+
+    /* ---- Borders ---- */
+    --border: #252220;
+    --border-light: #1f1b18;
+
+    /* ---- Fonts ---- */
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', 'SF Mono', monospace;
+    --jp: 'Noto Sans JP', sans-serif;
+    --tech: 'Orbitron', sans-serif;
+
+    /* ---- Spacing ---- */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+
+    /* ---- Radius ---- */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 12px;
+    --radius-full: 9999px;
+
+    /* ---- Shadows ---- */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+
+    /* ---- Glass ---- */
+    --glass-bg: rgba(23, 20, 18, 0.72);
+    --glass-border: rgba(232, 168, 124, 0.08);
+
+    /* ---- Transitions ---- */
+    --transition: all 0.15s ease;
+    --transition-slow: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* ---- Z-index ---- */
+    --z-dropdown: 50;
+    --z-sticky: 100;
+    --z-overlay: 200;
+    --z-modal: 300;
+    --z-toast: 400;
+}
+
+/* ---- Light variant ---- */
+[data-theme="light"] {
+    --void: #faf8f5;
+    --surface: #f5f2ee;
+    --raised: #ede9e4;
+    --elevated: #ffffff;
+
+    --accent-hover: #c08058;
+
+    --white: #1a1816;
+    --gray: #6e6660;
+    --muted: #b5ada6;
+    --faint: #e8e2dc;
+
+    --border: #e0dbd5;
+    --border-light: #ebe6e0;
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+
+    --glass-bg: rgba(250, 248, 245, 0.72);
+    --glass-border: rgba(0, 0, 0, 0.06);
+}
