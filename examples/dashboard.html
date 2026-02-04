@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Void UI - Dashboard</title>
+  <link rel="stylesheet" href="../packages/css/dist/void.css">
+  <style>
+    .dashboard { display: flex; min-height: 100vh; }
+    .main { flex: 1; margin-left: 240px; }
+    .main-header { padding: 24px 32px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .main-content { padding: 32px; }
+    .stat-value { font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; color: var(--white); }
+    .chart-placeholder { height: 200px; background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; color: var(--muted); font-family: var(--mono); font-size: 0.8rem; }
+    @media (max-width: 768px) {
+      .main { margin-left: 0; }
+      .void-sidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <nav class="void-sidebar">
+      <div class="void-sidebar__header">
+        <div class="void-avatar" style="background:var(--clay); color:var(--void); font-family:var(--tech); font-size:0.7rem; font-weight:700; width:32px; height:32px;">V</div>
+        <span style="font-weight:700; font-size:1rem; color:var(--white)">Void</span>
+      </div>
+      <div class="void-sidebar__section">
+        <div class="void-sidebar__section-title">Production</div>
+        <a href="#" class="void-sidebar__link void-sidebar__link--active">Dashboard</a>
+        <a href="#" class="void-sidebar__link">Projects</a>
+        <a href="#" class="void-sidebar__link">Shots</a>
+        <a href="#" class="void-sidebar__link">Assets</a>
+      </div>
+      <div class="void-sidebar__section">
+        <div class="void-sidebar__section-title">System</div>
+        <a href="#" class="void-sidebar__link">Settings</a>
+        <a href="#" class="void-sidebar__link">Pipelines</a>
+        <a href="#" class="void-sidebar__link">Logs</a>
+      </div>
+      <div style="margin-top:auto">
+        <span class="void-cryptic" style="display:block; text-align:center">虚空設計</span>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main">
+      <header class="main-header">
+        <div>
+          <h3>Dashboard</h3>
+          <p class="void-secondary" style="font-size:0.8rem; margin-top:0.25rem">Welcome back, Alejandro</p>
+        </div>
+        <div class="void-flex void-flex-align void-gap-sm">
+          <button class="void-btn void-btn--ghost void-btn--sm">Notifications</button>
+          <button class="void-btn void-btn--primary void-btn--sm">+ New Project</button>
+        </div>
+      </header>
+
+      <div class="main-content">
+        <!-- Stats -->
+        <div class="void-grid void-grid-auto void-mb-xl">
+          <div class="void-card">
+            <p class="void-secondary" style="font-size:0.8rem">Total Shots</p>
+            <p class="stat-value void-mt-sm">1,284</p>
+            <span class="void-badge void-badge--moss void-badge--sm void-mt-sm" style="display:inline-flex">+12%</span>
+          </div>
+          <div class="void-card">
+            <p class="void-secondary" style="font-size:0.8rem">In Progress</p>
+            <p class="stat-value void-mt-sm">342</p>
+            <span class="void-badge void-badge--peach void-badge--sm void-mt-sm" style="display:inline-flex">Active</span>
+          </div>
+          <div class="void-card">
+            <p class="void-secondary" style="font-size:0.8rem">Approved</p>
+            <p class="stat-value void-mt-sm">892</p>
+            <span class="void-badge void-badge--moss void-badge--sm void-mt-sm" style="display:inline-flex">69%</span>
+          </div>
+          <div class="void-card">
+            <p class="void-secondary" style="font-size:0.8rem">Render Queue</p>
+            <p class="stat-value void-mt-sm">48</p>
+            <span class="void-badge void-badge--sand void-badge--sm void-mt-sm" style="display:inline-flex">Pending</span>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="void-grid void-grid-2 void-mb-xl">
+          <div class="void-card">
+            <div class="void-card__header"><div class="void-card__title">Pipeline Throughput</div></div>
+            <div class="void-card__body"><div class="chart-placeholder">PIPELINE_CHART_DATA</div></div>
+          </div>
+          <div class="void-card">
+            <div class="void-card__header"><div class="void-card__title">Shot Progress</div></div>
+            <div class="void-card__body"><div class="chart-placeholder">PROGRESS_CHART_DATA</div></div>
+          </div>
+        </div>
+
+        <!-- Activity Table -->
+        <div class="void-card">
+          <div class="void-card__header" style="display:flex; justify-content:space-between; align-items:center">
+            <div class="void-card__title">Recent Activity</div>
+            <button class="void-btn void-btn--ghost void-btn--sm">View All</button>
+          </div>
+          <div class="void-card__body" style="padding:0">
+            <div class="void-table-wrap" style="border:none">
+              <table class="void-table">
+                <thead>
+                  <tr><th>Shot</th><th>Action</th><th>Status</th><th>Updated</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>SH010</td><td>Comp delivered</td><td><span class="void-badge void-badge--moss void-badge--sm">Approved</span></td><td>2 min ago</td></tr>
+                  <tr><td>SH020</td><td>Animation v3</td><td><span class="void-badge void-badge--peach void-badge--sm">Review</span></td><td>15 min ago</td></tr>
+                  <tr><td>SH035</td><td>Lighting pass</td><td><span class="void-badge void-badge--lilac void-badge--sm">Processing</span></td><td>1 hr ago</td></tr>
+                  <tr><td>SH042</td><td>FX simulation</td><td><span class="void-badge void-badge--sand void-badge--sm">Queued</span></td><td>3 hr ago</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

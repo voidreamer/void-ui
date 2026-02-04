@@ -2,28 +2,54 @@
 
 Cryptic tech aesthetic. Warm void, soft pastels, Japanese and tech vibes.
 
-A CSS design system extracted from [voidreamer.github.io](https://voidreamer.github.io). Drop it into any project for instant dark, warm, production-ready UI.
+A design system extracted from [voidreamer.github.io](https://voidreamer.github.io). Available as CSS, React components, and PySide6 widgets.
+
+## Packages
+
+| Package | Description | Path |
+|---------|-------------|------|
+| `@void-ui/css` | CSS design tokens and components | `packages/css` |
+| `@void-ui/react` | React component library | `packages/react` |
+| `void-ui` (PyPI) | PySide6 theme and widgets | `packages/pyside` |
 
 ## Quick Start
 
+### CSS
+
 ```html
-<link rel="stylesheet" href="void.css">
+<link rel="stylesheet" href="@void-ui/css/dist/void.css">
 ```
 
 Or import in JS/CSS:
 
 ```css
-@import 'void-ui/void.css';
+@import '@void-ui/css/dist/void.css';
 ```
 
-## Modular Imports
+### React
 
-Pick what you need:
+```tsx
+import { Button, Card, useTheme } from '@void-ui/react'
 
-```css
-@import 'void-ui/tokens.css';      /* Design tokens only (CSS variables) */
-@import 'void-ui/base.css';        /* Reset + typography + utilities */
-@import 'void-ui/components.css';  /* All components */
+function App() {
+  const { theme, toggle } = useTheme()
+  return (
+    <Card>
+      <Button variant="primary" onClick={toggle}>
+        Toggle Theme
+      </Button>
+    </Card>
+  )
+}
+```
+
+### PySide6
+
+```python
+from void_ui import apply_theme, VoidButton
+
+app = QApplication([])
+apply_theme(app)
 ```
 
 ## Design Tokens
@@ -52,7 +78,7 @@ Pick what you need:
 | `--jp` | Noto Sans JP | Cryptic decorations |
 | `--tech` | Orbitron | Technical labels, numbers |
 
-## Components
+## CSS Components
 
 ### Button
 
@@ -115,27 +141,6 @@ Colors: `--peach`, `--moss`, `--sand`, `--blush`, `--lilac`, `--danger`, `--outl
 </div>
 ```
 
-### Sidebar and Side Rail
-
-```html
-<!-- Full sidebar -->
-<aside class="void-sidebar">
-  <div class="void-sidebar__header">...</div>
-  <div class="void-sidebar__section">
-    <div class="void-sidebar__section-title">Production</div>
-    <a class="void-sidebar__link void-sidebar__link--active">Projects</a>
-    <a class="void-sidebar__link">Shots</a>
-  </div>
-</aside>
-
-<!-- Minimal rail (icon-only, like the blog) -->
-<nav class="void-rail">
-  <div class="void-rail__logo">V</div>
-  <a class="void-rail__link void-rail__link--active">...</a>
-  <span class="void-rail__cryptic">虚空設計</span>
-</nav>
-```
-
 ### More Components
 
 - Tabs: `.void-tabs` + `.void-tab`
@@ -145,11 +150,11 @@ Colors: `--peach`, `--moss`, `--sand`, `--blush`, `--lilac`, `--danger`, `--outl
 - Progress: `.void-progress` + `.void-progress__bar`
 - Toast: `.void-toast` with status variants
 - Avatar: `.void-avatar` with `--sm`, `--lg`, groups
+- Sidebar: `.void-sidebar` with sections and links
+- Navbar: `.void-navbar` glass navigation
 - Tooltip: `.void-tooltip-wrap` + `.void-tooltip`
-- Separator: `.void-sep` with optional text
-- Kbd: `.void-kbd`
-- Skeleton: `.void-skeleton`
 - Spinner: `.void-spinner`
+- Skeleton: `.void-skeleton`
 
 ## Light Theme
 
@@ -167,6 +172,15 @@ The signature void aesthetic. Use sparingly:
 <span class="void-cryptic">虚空設計</span>
 <span class="void-tech">SYS.GRID.04</span>
 <span class="void-mono">0x4F70656E</span>
+```
+
+## Development
+
+```bash
+npm install
+npm run build:css    # Build CSS
+npm run build:react  # Build React components
+npm run build        # Build everything
 ```
 
 ## Used By

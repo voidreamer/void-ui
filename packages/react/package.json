@@ -1,0 +1,37 @@
+{
+  "name": "@void-ui/react",
+  "version": "0.1.0",
+  "description": "React components for Void UI. Cryptic tech aesthetic, warm and dark.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist/", "src/"],
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly --declaration --outDir dist",
+    "clean": "rm -rf dist",
+    "dev": "vite build --watch"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0"
+  },
+  "keywords": ["react", "ui", "components", "void", "design-system"],
+  "author": "Alejandro Cabrera",
+  "license": "MIT"
+}

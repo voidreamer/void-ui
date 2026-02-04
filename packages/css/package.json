@@ -1,0 +1,19 @@
+{
+  "name": "@void-ui/css",
+  "version": "0.1.0",
+  "description": "Cryptic tech aesthetic CSS component library. Warm void, soft pastels.",
+  "main": "dist/void.css",
+  "style": "dist/void.css",
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node build.js --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["css", "theme", "ui", "components", "dark-mode", "design-system"],
+  "author": "Alejandro Cabrera",
+  "license": "MIT"
+}

@@ -1,26 +1,19 @@
 {
   "name": "void-ui",
   "version": "0.1.0",
-  "description": "Cryptic tech aesthetic. Warm void, soft pastels, Japanese and tech vibes. Reusable CSS design system.",
+  "private": true,
+  "description": "Cryptic tech aesthetic. Warm void, soft pastels, Japanese and tech vibes.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build:css && npm run build:react",
+    "build:css": "npm run build -w @void-ui/css",
+    "build:react": "npm run build -w @void-ui/react",
+    "clean": "npm run clean -w @void-ui/css && npm run clean -w @void-ui/react"
+  },
   "author": "Alejandro Cabrera",
   "license": "MIT",
-  "main": "void.css",
-  "style": "void.css",
-  "files": [
-    "void.css",
-    "tokens.css",
-    "base.css",
-    "components.css",
-    "README.md"
-  ],
-  "keywords": [
-    "css",
-    "design-system",
-    "dark-theme",
-    "ui",
-    "void",
-    "tech-aesthetic"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/voidreamer/void-ui"

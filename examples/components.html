@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Void UI - Component Gallery</title>
+  <link rel="stylesheet" href="../packages/css/dist/void.css">
+  <style>
+    .demo-section { margin-bottom: 3rem; }
+    .demo-section h2 { margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .demo-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 1rem; }
+    .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .color-swatch { width: 60px; height: 60px; border-radius: var(--radius-md); display: flex; align-items: end; padding: 4px; }
+    .color-swatch span { font-size: 10px; color: white; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+    .theme-toggle { position: fixed; top: 16px; right: 16px; z-index: 999; }
+  </style>
+</head>
+<body>
+  <button class="void-btn void-btn--outline void-btn--sm theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <div class="void-container" style="padding-top: 2rem; padding-bottom: 3rem;">
+    <h1>Void UI</h1>
+    <p class="void-secondary void-mt-sm void-mb-xl">Component Gallery. Every component, every variant.</p>
+
+    <!-- Colors -->
+    <div class="demo-section">
+      <h2>Colors</h2>
+      <div class="demo-row">
+        <div class="color-swatch" style="background:#0f0d0b"><span>void</span></div>
+        <div class="color-swatch" style="background:#171412"><span>surface</span></div>
+        <div class="color-swatch" style="background:#1f1b18"><span>raised</span></div>
+        <div class="color-swatch" style="background:#2a2521"><span>elevated</span></div>
+        <div class="color-swatch" style="background:#e8a87c"><span>peach</span></div>
+        <div class="color-swatch" style="background:#d4a5a5"><span>blush</span></div>
+        <div class="color-swatch" style="background:#c9b896"><span>sand</span></div>
+        <div class="color-swatch" style="background:#a5b5a0"><span>moss</span></div>
+        <div class="color-swatch" style="background:#b8a9c9"><span>lilac</span></div>
+        <div class="color-swatch" style="background:#c17c60"><span>clay</span></div>
+      </div>
+    </div>
+
+    <!-- Typography -->
+    <div class="demo-section">
+      <h2>Typography</h2>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6 class="void-mb-md">Heading 6</h6>
+      <p class="void-text void-mb-sm">Primary body text. The quick brown fox jumps over the lazy dog.</p>
+      <p class="void-secondary void-mb-sm">Secondary text for descriptions and metadata.</p>
+      <p class="void-muted void-mb-md">Muted text for hints and disabled states.</p>
+      <span class="void-cryptic">虚空設計</span>
+      <span class="void-tech void-mt-sm" style="display:block">SYS.GRID.04</span>
+    </div>
+
+    <!-- Buttons -->
+    <div class="demo-section">
+      <h2>Buttons</h2>
+      <div class="demo-row">
+        <button class="void-btn void-btn--primary">Primary</button>
+        <button class="void-btn void-btn--outline">Outline</button>
+        <button class="void-btn void-btn--ghost">Ghost</button>
+        <button class="void-btn void-btn--danger">Danger</button>
+      </div>
+      <div class="demo-row">
+        <button class="void-btn void-btn--primary void-btn--sm">Small</button>
+        <button class="void-btn void-btn--primary">Medium</button>
+        <button class="void-btn void-btn--primary void-btn--lg">Large</button>
+      </div>
+      <div class="demo-row">
+        <button class="void-btn void-btn--primary void-btn--pill">Pill Button</button>
+        <button class="void-btn void-btn--primary void-btn--icon">V</button>
+        <button class="void-btn void-btn--primary" disabled>Disabled</button>
+        <button class="void-btn void-btn--primary void-btn--loading">Loading</button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="demo-section">
+      <h2>Cards</h2>
+      <div class="demo-grid">
+        <div class="void-card">
+          <div class="void-card__header"><div class="void-card__title">Basic Card</div></div>
+          <div class="void-card__body">Simple surface card with border.</div>
+        </div>
+        <div class="void-card void-card--elevated">
+          <div class="void-card__header"><div class="void-card__title">Elevated</div></div>
+          <div class="void-card__body">Raised with shadow.</div>
+        </div>
+        <div class="void-card void-card--interactive">
+          <div class="void-card__header"><div class="void-card__title">Interactive</div></div>
+          <div class="void-card__body">Hover me, lifts on hover.</div>
+        </div>
+        <div class="void-card void-card--glass">
+          <div class="void-card__header"><div class="void-card__title">Glass</div></div>
+          <div class="void-card__body">Frosted glass effect.</div>
+        </div>
+        <div class="void-card void-card--compact">
+          <div class="void-card__title">Compact</div>
+          <div class="void-card__desc">Tighter padding.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <div class="demo-section">
+      <h2>Badges</h2>
+      <div class="demo-row">
+        <span class="void-badge">Default</span>
+        <span class="void-badge void-badge--peach">Peach</span>
+        <span class="void-badge void-badge--moss">Moss</span>
+        <span class="void-badge void-badge--sand">Sand</span>
+        <span class="void-badge void-badge--blush">Blush</span>
+        <span class="void-badge void-badge--lilac">Lilac</span>
+        <span class="void-badge void-badge--danger">Danger</span>
+        <span class="void-badge void-badge--outline">Outline</span>
+      </div>
+      <div class="demo-row">
+        <span class="void-badge void-badge--peach void-badge--sm">Small</span>
+        <span class="void-badge void-badge--peach">Default</span>
+        <span class="void-badge void-badge--peach void-badge--lg">Large</span>
+        <span class="void-badge void-badge--peach void-badge--pill">Pill</span>
+        <span class="void-badge void-badge--tech">v2.1</span>
+      </div>
+    </div>
+
+    <!-- Inputs -->
+    <div class="demo-section">
+      <h2>Form Inputs</h2>
+      <div style="max-width: 400px;">
+        <div class="void-form-group">
+          <label class="void-label">Text Input</label>
+          <input class="void-input" type="text" placeholder="Type something...">
+          <span class="void-hint">This is a hint message</span>
+        </div>
+        <div class="void-form-group">
+          <label class="void-label">Error State</label>
+          <input class="void-input void-input--error" type="text" value="Invalid value">
+          <span class="void-error">This field has an error</span>
+        </div>
+        <div class="void-form-group">
+          <label class="void-label">Select</label>
+          <select class="void-select">
+            <option>Choose an option</option>
+            <option>Pipeline A</option>
+            <option>Pipeline B</option>
+          </select>
+        </div>
+        <div class="void-form-group">
+          <label class="void-label">Textarea</label>
+          <textarea class="void-textarea" placeholder="Shot notes..."></textarea>
+        </div>
+        <div class="demo-row void-mt-md">
+          <span class="void-label">Toggle:</span>
+          <button class="void-switch void-switch--active" onclick="this.classList.toggle('void-switch--active')"></button>
+          <button class="void-switch" onclick="this.classList.toggle('void-switch--active')"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="demo-section">
+      <h2>Tabs</h2>
+      <div class="void-tabs void-mb-lg">
+        <button class="void-tab void-tab--active">Overview</button>
+        <button class="void-tab">Shots</button>
+        <button class="void-tab">Assets</button>
+        <button class="void-tab">Settings</button>
+      </div>
+    </div>
+
+    <!-- Tables -->
+    <div class="demo-section">
+      <h2>Tables</h2>
+      <div class="void-table-wrap">
+        <table class="void-table">
+          <thead>
+            <tr><th>Shot</th><th>Status</th><th>Artist</th><th>Updated</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>SH010</td><td><span class="void-badge void-badge--moss void-badge--sm">Approved</span></td><td>Alejandro</td><td>2 min ago</td></tr>
+            <tr><td>SH020</td><td><span class="void-badge void-badge--peach void-badge--sm">In Progress</span></td><td>Sofia</td><td>15 min ago</td></tr>
+            <tr><td>SH030</td><td><span class="void-badge void-badge--sand void-badge--sm">Review</span></td><td>Merrino</td><td>1 hr ago</td></tr>
+            <tr><td>SH040</td><td><span class="void-badge void-badge--danger void-badge--sm">Rejected</span></td><td>Ghost</td><td>3 hr ago</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Progress -->
+    <div class="demo-section">
+      <h2>Progress</h2>
+      <div style="max-width: 400px;">
+        <div class="void-progress void-mb-md">
+          <div class="void-progress__bar void-progress__bar--peach" style="width: 72%"></div>
+        </div>
+        <div class="void-progress void-progress--sm void-mb-md">
+          <div class="void-progress__bar void-progress__bar--moss" style="width: 45%"></div>
+        </div>
+        <div class="void-progress void-progress--lg">
+          <div class="void-progress__bar void-progress__bar--sand" style="width: 88%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatar -->
+    <div class="demo-section">
+      <h2>Avatar</h2>
+      <div class="demo-row">
+        <div class="void-avatar void-avatar--sm">A</div>
+        <div class="void-avatar">AC</div>
+        <div class="void-avatar void-avatar--lg">V</div>
+      </div>
+      <div class="void-avatar-group void-mt-md">
+        <div class="void-avatar">A</div>
+        <div class="void-avatar">S</div>
+        <div class="void-avatar">M</div>
+      </div>
+    </div>
+
+    <!-- Alerts -->
+    <div class="demo-section">
+      <h2>Alerts</h2>
+      <div class="void-alert void-mb-md">
+        <div><div class="void-alert__title">Default Alert</div><div class="void-alert__desc">This is a default informational alert.</div></div>
+      </div>
+      <div class="void-alert void-alert--success void-mb-md">
+        <div><div class="void-alert__title">Success</div><div class="void-alert__desc">Pipeline completed successfully.</div></div>
+      </div>
+      <div class="void-alert void-alert--warning void-mb-md">
+        <div><div class="void-alert__title">Warning</div><div class="void-alert__desc">Disk space running low.</div></div>
+      </div>
+      <div class="void-alert void-alert--danger">
+        <div><div class="void-alert__title">Error</div><div class="void-alert__desc">Build failed. Check logs for details.</div></div>
+      </div>
+    </div>
+
+    <!-- Animations -->
+    <div class="demo-section">
+      <h2>Animations</h2>
+      <div class="demo-row">
+        <div class="void-spinner void-spinner--sm"></div>
+        <div class="void-spinner"></div>
+        <div class="void-spinner void-spinner--lg"></div>
+      </div>
+      <div class="demo-row void-mt-md">
+        <div class="void-skeleton void-skeleton--avatar"></div>
+        <div style="flex:1">
+          <div class="void-skeleton void-skeleton--title void-mb-sm"></div>
+          <div class="void-skeleton void-skeleton--text"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout -->
+    <div class="demo-section">
+      <h2>Layout</h2>
+      <div class="void-grid void-grid-3 void-mb-lg">
+        <div class="void-card void-card--compact" style="text-align:center">Col 1</div>
+        <div class="void-card void-card--compact" style="text-align:center">Col 2</div>
+        <div class="void-card void-card--compact" style="text-align:center">Col 3</div>
+      </div>
+    </div>
+
+    <hr class="void-sep">
+    <p class="void-muted void-mt-md" style="text-align:center; font-size:0.8rem">Void UI v0.1.0</p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    }
+  </script>
+</body>
+</html>
